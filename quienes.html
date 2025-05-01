@@ -1,15 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CURSOS</title>
-    <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Quiénes Somos? | Aprende con IA</title>
+  <style>
+    :root {
+      --verde: #30dd30;
+      --verde-oscuro: #27ae60;
+      --rojo: #e74c3c;
+      --rojo-oscuro: #c0392b;
+      --gris-claro: #f4f4f4;
+      --sombra: rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--gris-claro);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--verde);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px var(--sombra);
+    }
+
+    .section-header {
+      background-color: var(--verde);
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .contenido {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .contenido img {
+      max-width: 100%;
+      width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px var(--sombra);
+    }
+
+    .texto {
+      flex: 1;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: var(--verde);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .contenido {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contenido img {
+        width: 90%;
+      }
+
+      .texto {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <section id="inicio" class="section-inicio">
-        <h1>QUIENES SOMOS</h1>
-        <p>Aprende con ayuda de inteligencia artificial de manera interactiva y práctica, utilizando los recursos más avanzados.</p>
+
+  <header>
+    <h1>Aprende con IA</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes.html">Quiénes somos</a></li>
+        <li><a href="acerca.html">Acerca de</a></li>
+        <li><a href="tutoriales.html">Legales</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-header">
+      <h2>¿Quiénes somos?</h2>
     </section>
+
+    <section class="contenido">
+      <img src="img/WhatsApp Image 2025-04-30 at 6.22.09 PM.jpeg" alt="Personas estudiando con IA">
+      <div class="texto">
+        <p>
+          Somos una comunidad de educadores, desarrolladores y expertos en IA comprometidos con hacer del conocimiento una herramienta accesible para todos. Sabemos que la tecnología no solo cambia industrias, también transforma vidas, y por eso creamos cursos prácticos, interactivos y adaptados a distintos niveles.
+        </p>
+        <p>
+          Nuestra plataforma utiliza algoritmos inteligentes para adaptarse a tu ritmo, identificar tus fortalezas y ayudarte a superar tus desafíos. Ya sea que estés iniciándote en programación, buscando especializarte en ciencia de datos o explorando el potencial de la IA, aquí encontrarás recursos diseñados para impulsar tu crecimiento.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Aprende con IA. Todos los derechos reservados.
+  </footer>
+
 </body>
 </html>
