@@ -1,26 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CURSOS</title>
-    <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Quiénes Somos? | Aprende con IA</title>
+  <style>
+    :root {
+      --verde: #30dd30;
+      --verde-oscuro: #27ae60;
+      --rojo: #e74c3c;
+      --rojo-oscuro: #c0392b;
+      --gris-claro: #f4f4f4;
+      --sombra: rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--gris-claro);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--verde);
+      color: white;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1300px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px var(--sombra);
+    }
+
+    .section-header {
+      background-color: var(--verde);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+
+
+
+    .texto {
+      flex: 1;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: var(--verde);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 230px;
+    }
+
+    
+    .formulario {
+      max-width: 800px; 
+      margin: 0 auto;   
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px var(--sombra);
+    }
+
+    .formulario fieldset {
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    .formulario .campo {
+      margin-bottom: 15px;
+    }
+
+    .formulario label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .formulario input,
+    .formulario select,
+    .formulario textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .formulario input[type="submit"] {
+      width: auto;
+      background-color: var(--verde);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .formulario input[type="submit"]:hover {
+      background-color: var(--verde-oscuro);
+    }
+
+    @media (max-width: 768px) {
+      .contenido {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contenido img {
+        width: 90%;
+      }
+
+      .texto {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="quienes.html">Quienes somos</a></li>
-                <li><a href="acerca.html">Acerca de</a></li>
-                <li><a href="legales.html">Legales</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="inicio" class="section-inicio">
-        <h1>CONTACTO</h1>
-        <p>Aprende con ayuda de inteligencia artificial de manera interactiva y práctica, utilizando los recursos más avanzados.</p>
+
+  <header>
+    <h1>Aprende con IA</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes.html">Quiénes somos</a></li>
+        <li><a href="acerca.html">Acerca de</a></li>
+        <li><a href="legales.html">Legales</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-header">
+      <h2>Contacto Aprende con IA</h2>
     </section>
+
+    <div class="contenido-principal contenedor">
+      <form class="formulario">
+        <fieldset>
+          <legend class="text-center">Tus Datos</legend>
+          <div class="campo">
+            <label for="nombre">Nombre: </label>
+            <input id="nombre" type="text" placeholder="Coloca tu Nombre"/>
+          </div>
+          <div class="campo">
+            <label for="asunto">Asunto: </label>
+            <input id="asunto" type="text" placeholder="Coloca tu Asunto"/>
+          </div>
+          <div class="campo">
+            <label for="email">E-mail: </label>
+            <input type="email" id="email" placeholder="Tu E-mail">
+          </div>
+          <div class="campo">
+            <label for="tel">Telefono: </label>
+            <input type="tel" id="tel" placeholder="Tu Teléfono">
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje: </label>
+            <textarea name="" id="mensaje" cols="30" rows="10"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="text-center">País</legend>
+          <div class="campo">
+            <select name="" id="">
+              <option value=""> -- Seleccione un pais --</option>
+              <option value="MX">Mexico</option>
+              <option value="CO">Colombia</option>
+              <option value="BO">Bolivia</option>
+              <option value="AR">Argentina</option>
+              <option value="PR">Perú</option>
+              <option value="ES">España</option>
+              <option value="CL">Chile</option>
+            </select>
+          </div>
+        </fieldset>
+        <input class="btn" type="submit" value="Enviar Formulario">
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Aprende con IA. Todos los derechos reservados.
+  </footer>
+
 </body>
 </html>
