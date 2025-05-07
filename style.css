@@ -1,136 +1,133 @@
-
-* {
+:root {
+    --verde: #6ce71b;
+    --verde-claro: #84f18d;
+    --verde-oscuro: #3ec522;
+    --gris-claro: #f5faf7;
+    --gris-oscuro: #2d3436;
+    --verde-hover: #5cd41a;
+    --sombra: rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fondo-claro);
+    color: var(--texto);
     line-height: 1.6;
-    background-color:#f4f4f4;
-    text-align: center;
-}
-
-
-header {
-    background-color: rgb(48, 221, 48);
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header nav ul {
-    list-style-type: none;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  header {
+    background-color: var(--verde);
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px var(--sombra);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-}
-
-header nav ul li a:hover {
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
     text-decoration: underline;
-}
-
-section {
-    padding: 30px;
-    margin: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-.section-inicio {
+  }
+  
+  .section-inicio {
+    max-width: 900px;
+    margin: 3rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px var(--sombra);
     text-align: center;
-    background-color: rgb(48, 221, 48);
-    color: white;
-    border-radius: 8px;
-}
-
-
-.section-cursos ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-h2 {
-    text-align: center;
-}
-p {
-    text-align: center;
-    color: black;
-    
-}
-
-.section-cursos li {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-
-button {
-    background-color: rgb(48, 221, 48);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #27ae60;
-}
-
-form {
+  }
+  
+  .section-inicio h1 {
+    font-size: 2rem;
+    color: var(--verde);
+    margin-bottom: 1rem;
+  }
+  
+  .section-inicio h1 span {
+    color: var(--verde-hover);
+  }
+  
+  .section-inicio p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  .botones {
     display: flex;
-    flex-direction: column;
-}
-
-form input, form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-form button {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #e74c3c;
-    color: white;
-    padding: 10px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  button {
+    background-color: var(--verde);
+    color: rgb(255, 255, 255);
+    padding: 0.8rem 1.5rem;
     border: none;
-    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
     cursor: pointer;
-}
-
-form button:hover {
-    background-color: #c0392b;
-}
-
-
-footer {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    background-color: rgb(48, 221, 48);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: var(--verde-hover);
+    transform: scale(1.05);
+  }
+  
+  .centrar-img {
+    max-width: 100%;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px var(--sombra);
+    margin-top: 20px;
+  }
+  
+  footer {
+    margin-top: 4rem;
+    padding: 1.5rem;
+    background-color: var(--verde);
     color: white;
-    padding: 20px 0;
-    margin-top: 35px;
-}
-.centrar-img {
-    display: block;
-    margin: 0 auto;
-    margin-top: 50px;
-}
-.img-estudio {
-    float: left;
-    margin: 20px;
-    width: 400px;
-}
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .botones {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  
+    .centrar-img {
+      width: 90%;
+    }
+  }
+  
